@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               BackgroundColor="#151515"
+               FlyoutBackgroundColor="#1e1e1e"
+               xmlns:pages="clr-namespace:WiFirgb.Pages" xmlns:pages1="clr-namespace:WiFirgb.Pages.Groups"
+       x:Class="WiFirgb.MainPage">
+
+    <Shell.FlyoutHeader UnselectedColor = "red " DisabledColor ="red">
+        <StackLayout x:Name="back" BackgroundColor="PowderBlue" Padding="10">
+            <Image HeightRequest="100" Source="xamarin.png" />
+            <Label Text="Rainbow Light" />
+            <Label Text="@nomatin"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.Resources>
+        <Style
+            TargetType="Layout"
+            ApplyToDerivedTypes="True"
+            Class="FlyoutItemLayoutStyle">
+            <Setter
+                Property="HeightRequest"
+                Value="44" />
+
+            <Setter
+                TargetName="FlyoutItemLabel"
+                Property="Label.FontSize"
+                Value="16" />
+            <Setter
+                TargetName="FlyoutItemLabel"
+                Property="Label.TextColor"
+                Value="White" />
+            <Setter
+                TargetName="FlyoutItemLabel"
+                Property="Label.HeightRequest"
+                Value="44" />
+            <Setter
+                TargetName="FlyoutItemLabel"
+                Property="Label.Margin"
+                Value="0" />
+            <Setter
+                Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup
+                        x:Name="CommonStates">
+                        <VisualState
+                            x:Name="Normal">
+                            <VisualState.Setters>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState
+                            x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="BackgroundColor"
+                                    Value="#151515" />
+                                <Setter
+                                    TargetName="FlyoutItemLabel"
+                                    Property="Label.TextColor"
+                                    Value="White" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </Shell.Resources>
+    <FlyoutItem Title="Выбор Цвета" FlyoutIcon="colour.png">
+        <ShellContent  Title="Стробоскоп" ContentTemplate="{DataTemplate pages:PageColor}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Анимации" FlyoutIcon="fire.png">
+        <Tab>
+            
+            <ShellContent Title="Огонь" Route="fire">
+                <pages:PageFire />
+            </ShellContent>
+            <ShellContent Title="Радуга">
+                <pages:PageRain />
+            </ShellContent>
+            <ShellContent Title="Стробоскоп">
+                <pages:PageStrobe />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+    <!--
+    <FlyoutItem Title="Пресеты" FlyoutIcon="presets.png">
+        <Tab>
+            <ShellContent Title="Выбор">
+                <pages:PagePresets/>
+            </ShellContent>
+            <ShellContent Title="Создание">
+                <pages:PageNewPreset/>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+    -->
+    <FlyoutItem Title="Настройки" FlyoutIcon="settings.png">
+        <Tab>
+            <ShellContent Title="Выбор">
+                <pages:PageSettings/>
+            </ShellContent>
+            
+        </Tab>
+        
+    </FlyoutItem>
+
+
+</Shell>

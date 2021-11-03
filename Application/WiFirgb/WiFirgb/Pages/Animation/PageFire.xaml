@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:colorpicker="clr-namespace:ColorPicker;assembly=ColorPicker"
+             BackgroundColor="#1e1e1e"
+             Title="Анимации"
+             x:Class="WiFirgb.Pages.PageFire">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="75*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+
+            <colorpicker:ColorWheel x:Name="ColorFire"
+                                ShowLuminositySlider="False"
+                                ShowLuminosityWheel="True"
+                                IsVisible="True"
+                                Padding="5"
+                                Grid.Row="1"/>
+            
+            <StackLayout Grid.Row="2">
+                <Label x:Name="SpeedText" Text="Скорость" FontSize="16" FontFamily="Lobster" TextColor="White" Margin="13,0"/>
+                <Slider x:Name="Speed" Minimum="0" Maximum="33" Value="10" 
+                                MinimumTrackColor="{Binding Source={x:Reference ColorFire}, Path=SelectedColor}" MaximumTrackColor="Gray" ThumbColor="White" ValueChanged="Speed_ValueChanged"/>
+            </StackLayout>
+            <StackLayout Grid.Row="3">
+                <Label x:Name="RatioText" Text="Плавность" FontSize="16" FontFamily="Lobster" TextColor="White" Margin="13,0" />
+                <Slider x:Name="Ratio" Minimum="0.1" Maximum="0.5" Value="0.17" 
+                                MinimumTrackColor="{Binding Source={x:Reference ColorFire}, Path=SelectedColor}" MaximumTrackColor="Gray" ThumbColor="White" ValueChanged="Ratio_ValueChanged"/>
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

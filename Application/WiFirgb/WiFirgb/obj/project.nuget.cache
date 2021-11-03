@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "cGR+j0EartcPaZbxxRcBaVw0/sZnWE+vSIqC+d0OS+j9xYd4bGAJpgthYobnYuzxM4Mih/6XdzjIDi+BYd4EhA==",
+  "success": true,
+  "projectFilePath": "D:\\project\\WiFirgb\\WiFirgb\\WiFirgb\\WiFirgb\\WiFirgb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\timur\\.nuget\\packages\\colormineportable\\2.0.1\\colormineportable.2.0.1.nupkg.sha512",
+    "C:\\Users\\timur\\.nuget\\packages\\colorpicker.xamarin.forms\\1.3.4.11\\colorpicker.xamarin.forms.1.3.4.11.nupkg.sha512",
+    "C:\\Users\\timur\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\timur\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\timur\\.nuget\\packages\\refractored.floatingactionbuttonforms\\2.1.0\\refractored.floatingactionbuttonforms.2.1.0.nupkg.sha512",
+    "C:\\Users\\timur\\.nuget\\packages\\skiasharp\\1.60.3\\skiasharp.1.60.3.nupkg.sha512",
+    "C:\\Users\\timur\\.nuget\\packages\\skiasharp.views.forms\\1.60.3\\skiasharp.views.forms.1.60.3.nupkg.sha512",
+    "C:\\Users\\timur\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\timur\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\timur\\.nuget\\packages\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:colorpicker="clr-namespace:ColorPicker;assembly=ColorPicker"
+             BackgroundColor="#1e1e1e"
+             Title="Выбор цвета"
+             x:Class="WiFirgb.Pages.PageColor">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="75*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+
+            
+            <colorpicker:ColorWheel x:Name="ColorStatic"
+                                IsVisible="True"
+                                Vertical="True"
+                                Padding="5"
+                                Grid.Row="1"/>
+            <colorpicker:HSLSliders x:Name="HSLSliders1"
+                                ConnectedColorPicker="{x:Reference Name=ColorStatic}"
+                                ShowAlphaSlider="false"
+                                Padding="5"
+                                Grid.Row="2"/>
+            <colorpicker:RGBSliders x:Name="RGBSliders1"
+                                ConnectedColorPicker="{x:Reference Name=ColorStatic}"
+                                ShowAlphaSlider="false"
+                                Padding="5"
+                                Grid.Row="3"/>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

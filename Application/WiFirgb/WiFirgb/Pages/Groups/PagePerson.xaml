@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:fab="clr-namespace:Refractored.FabControl;assembly=Refractored.FabControl"
+             x:Class="WiFirgb.Pages.Groups.PagePerson">
+    <ContentPage.Content>
+        <Grid>
+            <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <fab:FloatingActionButtonView
+				ImageName="fire.png"
+				ColorNormal="Red"
+				ColorPressed="Green"
+				ColorRipple="DarkBlue"
+				x:Name="FloatingActionButtonAdd"
+				IsVisible="False"
+				AbsoluteLayout.LayoutFlags="PositionProportional"
+				AbsoluteLayout.LayoutBounds="1, 1, AutoSize, AutoSize"/>
+            </AbsoluteLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

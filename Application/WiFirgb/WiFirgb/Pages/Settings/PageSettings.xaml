@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#1e1e1e"
+             Title="Настройки"
+             x:Class="WiFirgb.Pages.PageSettings">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <StackLayout>
+                <Label Text="Имя сети" TextColor="White"/>
+                <Entry  x:Name="WiFi_SSID" TextColor="White"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Пароль сети" TextColor="White"/>
+                <Entry x:Name="WiFi_Pass" TextColor="White" TextChanged="WiFi_Entry_TextChanged"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Режим точки доступа:" FontSize="16" TextColor="White" HorizontalOptions="Center"/>
+                <Switch x:Name="Ap" VerticalOptions="Center" HorizontalOptions="Center" Toggled="Ap_Toggled"/>
+            </StackLayout>
+            <Button x:Name="Send" Text="отправить" Clicked="Send_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

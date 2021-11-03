@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:colorpicker="clr-namespace:ColorPicker;assembly=ColorPicker"
+             BackgroundColor="#1e1e1e"
+             Title="Анимации"
+             x:Class="WiFirgb.Pages.PageRain">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="80*"/>
+            </Grid.RowDefinitions>
+            <StackLayout  Grid.Row="0" Margin="10,10">
+                <Label x:Name="TextRain" Text="Тип радуги" FontSize="16" FontFamily="Lobster" TextColor="White" />
+                <Picker x:Name="pickerRain" TextColor="White" BackgroundColor="#1e1e1e" TitleColor="Aqua" PropertyChanged="pickerRain_PropertyChanged">
+
+
+                    <Picker.Items >
+                        <x:String>Rgb</x:String>
+                        <x:String>Hsv</x:String>
+                        <x:String>Hsv_отвал</x:String>
+
+                    </Picker.Items>
+
+                </Picker>
+                <StackLayout  Grid.Row="1" Margin="0,0">
+                    <Label x:Name="SpeedText" Text="Скорость" FontSize="16" FontFamily="Lobster" TextColor="White" Margin="13,0"/>
+                    <Slider x:Name="Speed" Minimum="0" Maximum="500" Value="100" 
+                                MinimumTrackColor="Aqua" MaximumTrackColor="Gray" ThumbColor="White" ValueChanged ="Speed_ValueChanged"/>
+                </StackLayout>
+                <StackLayout  Grid.Row="2" Margin="0,0">
+                    <Label x:Name="BrightnessText" Text="Яркость" FontSize="16" FontFamily="Lobster" TextColor="White" Margin="13,0"/>
+                    <Slider x:Name="Brightness" Minimum="0" Maximum="255" Value="100" 
+                                MinimumTrackColor="Aqua" MaximumTrackColor="Gray" ThumbColor="White" ValueChanged="Brightness_ValueChanged" />
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
